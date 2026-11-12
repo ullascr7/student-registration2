@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form id="registrationForm">
+
+    Student Name:
+    <input type="text" id="name" required>
+    <br><br>
+
+    Email ID:
+    <input type="email" id="email" required>
+    <br><br>
+
+    USN:
+    <input type="text" id="usn" required>
+    <br><br>
+
+    Department:
+    <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="CSE">Computer Science</option>
+        <option value="AIML">Artificial Intelligence</option>
+        <option value="ECE">Electronics</option>
+        <option value="ME">Mechanical</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("message").innerText =
+    "Registration Successful!";
+});
+</script>
+
+</body>
+</html>
